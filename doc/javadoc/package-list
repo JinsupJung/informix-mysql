@@ -1,0 +1,11 @@
+com.informix.asf
+com.informix.bson
+com.informix.csm
+com.informix.csm.crypto
+com.informix.jdbc
+com.informix.jdbcx
+com.informix.jns
+com.informix.json
+com.informix.lang
+com.informix.smartTrigger
+com.informix.util
