@@ -1,0 +1,88 @@
+2024-11-08 09:37:04,615 - INFO - ETL 프로세스 시작.
+2024-11-08 09:37:04,615 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:37:04,642 - INFO - MySQL 연결 성공.
+2024-11-08 09:37:04,642 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:37:04,939 - INFO - Informix 연결 성공.
+2024-11-08 09:37:04,940 - ERROR - ETL 프로세스 실패: 1054 (42S22): Unknown column 'order_date' in 'where clause'
+2024-11-08 09:38:25,977 - INFO - ETL 프로세스 시작.
+2024-11-08 09:38:25,977 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:38:26,003 - INFO - MySQL 연결 성공.
+2024-11-08 09:38:26,003 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:38:26,294 - INFO - Informix 연결 성공.
+2024-11-08 09:38:26,297 - ERROR - ETL 프로세스 실패: name 'order_date' is not defined
+2024-11-08 09:39:08,577 - INFO - ETL 프로세스 시작.
+2024-11-08 09:39:08,577 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:39:08,603 - INFO - MySQL 연결 성공.
+2024-11-08 09:39:08,603 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:39:08,884 - INFO - Informix 연결 성공.
+2024-11-08 09:39:08,884 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 09:39:08,889 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 09:41:57,919 - INFO - ETL 프로세스 시작.
+2024-11-08 09:41:57,919 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:41:57,946 - INFO - MySQL 연결 성공.
+2024-11-08 09:41:57,946 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:41:58,243 - INFO - Informix 연결 성공.
+2024-11-08 09:41:58,243 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 09:41:58,248 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 09:42:17,981 - INFO - ETL 프로세스 시작.
+2024-11-08 09:42:17,981 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:42:18,007 - INFO - MySQL 연결 성공.
+2024-11-08 09:42:18,007 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:42:18,303 - INFO - Informix 연결 성공.
+2024-11-08 09:42:18,304 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 09:42:18,309 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 09:45:28,012 - INFO - ETL 프로세스 시작.
+2024-11-08 09:45:28,012 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:45:28,039 - INFO - MySQL 연결 성공.
+2024-11-08 09:45:28,039 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:45:28,336 - INFO - Informix 연결 성공.
+2024-11-08 09:45:28,336 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 09:45:28,342 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 09:52:35,646 - INFO - ETL 프로세스 시작.
+2024-11-08 09:52:35,647 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:52:35,674 - INFO - MySQL 연결 성공.
+2024-11-08 09:52:35,674 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:52:35,947 - INFO - Informix 연결 성공.
+2024-11-08 09:52:35,947 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 09:52:35,952 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 09:54:39,315 - INFO - ETL 프로세스 시작.
+2024-11-08 09:54:39,315 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:54:39,342 - INFO - MySQL 연결 성공.
+2024-11-08 09:54:39,342 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:54:39,622 - INFO - Informix 연결 성공.
+2024-11-08 09:54:39,622 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 09:54:39,628 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 09:57:05,923 - INFO - ETL 프로세스 시작.
+2024-11-08 09:57:05,923 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 09:57:05,949 - INFO - MySQL 연결 성공.
+2024-11-08 09:57:05,949 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 09:57:06,245 - INFO - Informix 연결 성공.
+2024-11-08 09:57:06,246 - INFO - MySQL에서 order_date가 2024-11-08인 레코드 삭제 완료.
+2024-11-08 09:57:06,246 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 09:57:13,003 - INFO - 데이터 추출 완료. 총 541개의 레코드.
+2024-11-08 09:57:13,003 - INFO - Truncating MySQL TbWebOrder table before insert.
+2024-11-08 09:57:13,045 - INFO - MySQL로 데이터 삽입 중...
+2024-11-08 09:57:13,627 - INFO - MySQL에 541개의 데이터 삽입 완료.
+2024-11-08 09:57:13,675 - INFO - chain_name 업데이트 완료.
+2024-11-08 09:57:13,725 - INFO - ETL 프로세스 성공적으로 완료.
+2024-11-08 10:05:21,067 - INFO - ETL 프로세스 시작.
+2024-11-08 10:05:21,067 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 10:05:21,094 - INFO - MySQL 연결 성공.
+2024-11-08 10:05:21,094 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 10:05:21,388 - INFO - Informix 연결 성공.
+2024-11-08 10:05:21,388 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 10:05:21,393 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 10:06:07,977 - INFO - ETL 프로세스 시작.
+2024-11-08 10:06:07,977 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 10:06:08,004 - INFO - MySQL 연결 성공.
+2024-11-08 10:06:08,004 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 10:06:08,298 - INFO - Informix 연결 성공.
+2024-11-08 10:06:08,298 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 10:06:08,304 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.
+2024-11-08 10:06:57,310 - INFO - ETL 프로세스 시작.
+2024-11-08 10:06:57,310 - INFO - MySQL 연결 중: 175.196.7.45
+2024-11-08 10:06:57,337 - INFO - MySQL 연결 성공.
+2024-11-08 10:06:57,337 - INFO - Informix 연결 중: 175.196.7.17:1526
+2024-11-08 10:06:57,631 - INFO - Informix 연결 성공.
+2024-11-08 10:06:57,631 - INFO - Informix에서 데이터 추출 중...
+2024-11-08 10:06:57,637 - ERROR - ETL 프로세스 실패: java.sql.SQLException: Code-set conversion function failed due to illegal sequence or invalid value.

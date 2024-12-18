@@ -166,17 +166,39 @@ try:
         inout_chain_no,
         inout_sw_jikchak,
         inout_type,
-        daily_pay
-    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        daily_pay,
+        chain_name,
+        chain_no
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
     # Insert records into MySQL after converting to UTF-8
     inserted_rows = 0
     for row in rows:
         # Apply UTF-8 conversion to each field in the row
-        row_utf8 = tuple(convert_to_utf8(item) for item in row)
+        row_utf8 = list(convert_to_utf8(item) for item in row)
         
-        # Insert the row into MySQL, including inout_pay
+        # Get the value of ks_busor
+        ks_busor = row_utf8[8]  # Assuming ks_busor is in the 9th column (0-based index 8)
+        
+        # Add chain_name and chain_no based on ks_busor value
+        if ks_busor == '932000':
+            chain_name, chain_no = "놀부유황오리진흙구이 잠실점", '000003'
+        elif ks_busor == '915000':
+            chain_name, chain_no = "놀부부대찌개&족발보쌈 난곡점", '000004'
+        elif ks_busor == '986000':
+            chain_name, chain_no = "놀부항아리갈비 마포광흥창점", '000005'
+        elif ks_busor == '987000':
+            chain_name, chain_no = "놀부항아리갈비 명일점", '000006'
+        elif ks_busor == '988000':
+            chain_name, chain_no = "놀부청담직영점", '000158'
+        else:
+            chain_name, chain_no = None, None  # Default values if ks_busor doesn't match
+
+        # Add chain_name and chain_no to row_utf8 list
+        row_utf8.extend([chain_name, chain_no])
+
+        # Insert the row into MySQL, including chain_name and chain_no
         mysql_cursor.execute(mysql_insert_query, row_utf8)
         inserted_rows += 1
 

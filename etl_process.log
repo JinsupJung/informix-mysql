@@ -9250,3 +9250,44 @@
 2024-10-15 08:24:19,671 - INFO - Connected to MySQL.
 2024-10-15 08:24:19,671 - INFO - Truncating the MySQL table tb_item_master
 2024-10-15 08:24:19,672 - ERROR - ETL process failed: 1146 (42S02): Table 'nolboo.tb_item_master' doesn't exist
+2024-10-23 09:07:07,198 - INFO - Starting ETL process to fetch all records.
+2024-10-23 09:07:07,203 - INFO - Connecting to Informix at 175.196.7.17:1526
+2024-10-23 09:07:07,461 - INFO - Connected to Informix.
+2024-10-23 09:07:07,461 - INFO - Executing query: SELECT * FROM cm_item_master
+2024-10-23 09:07:10,754 - INFO - Fetched 8819 records from Informix.
+2024-10-23 09:07:10,754 - INFO - Connecting to MySQL at 175.196.7.45 with UTF-8 charset
+2024-10-23 09:07:10,781 - INFO - Connected to MySQL.
+2024-10-23 09:07:10,781 - INFO - Truncating the MySQL table tb_item_master
+2024-10-23 09:07:10,816 - INFO - MySQL table tb_item_master truncated successfully.
+2024-10-23 09:07:10,818 - INFO - Sample row (converted to UTF-8): ('6051511', '6051511', '구)화이바원형', '화이바원형          ', '01', '개', '999', '기타', '1', 'outcd', 'incod', '1', '2', '       ', 0.0, '2', 10.0, 10.0, 5.0, '1100', '0', '4', 'N', '3 ', 'N', 'N', 'N', None, 0.0, 'Y', 'N', 'Y', ' ', '1', 'Y', 1.0, 1, 500, 1.0, '1', 1.0, '1', '1', 1, 0.0, 0.0, 0.0, '1', '1', '0', '09', '20040101', '29991231', '화이바원형                    ', None, None, None, None, '60', None, None, '0', None, None, None, '2', 'N', 'N', None, None, None, '12110', None, None, None, None, None, None)
+2024-10-23 09:07:15,059 - ERROR - ETL process failed: 1264 (22003): Out of range value for column 'term_val' at row 1
+2024-10-23 09:08:23,201 - INFO - Starting ETL process to fetch all records.
+2024-10-23 09:08:23,202 - INFO - Connecting to Informix at 175.196.7.17:1526
+2024-10-23 09:08:23,466 - INFO - Connected to Informix.
+2024-10-23 09:08:23,466 - INFO - Executing query: SELECT * FROM cm_item_master
+2024-10-23 09:08:26,843 - INFO - Fetched 8819 records from Informix.
+2024-10-23 09:08:26,843 - INFO - Connecting to MySQL at 175.196.7.45 with UTF-8 charset
+2024-10-23 09:08:26,870 - INFO - Connected to MySQL.
+2024-10-23 09:08:26,870 - INFO - Truncating the MySQL table tb_item_master
+2024-10-23 09:08:26,896 - INFO - MySQL table tb_item_master truncated successfully.
+2024-10-23 09:08:26,897 - INFO - Sample row (converted to UTF-8): ('6051511', '6051511', '구)화이바원형', '화이바원형          ', '01', '개', '999', '기타', '1', 'outcd', 'incod', '1', '2', '       ', 0.0, '2', 10.0, 10.0, 5.0, '1100', '0', '4', 'N', '3 ', 'N', 'N', 'N', None, 0.0, 'Y', 'N', 'Y', ' ', '1', 'Y', 1.0, 1, 500, 1.0, '1', 1.0, '1', '1', 1, 0.0, 0.0, 0.0, '1', '1', '0', '09', '20040101', '29991231', '화이바원형                    ', None, None, None, None, '60', None, None, '0', None, None, None, '2', 'N', 'N', None, None, None, '12110', None, None, None, None, None, None)
+2024-10-23 09:08:31,345 - ERROR - Failed to decode value ³îºÎ¹«±³µ¿³«ÁöººÀ½(¹øµé)(ÀÏ¹ÝÀ: 'euc_kr' codec can't decode byte 0xc0 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:31,590 - ERROR - Failed to decode value ³îºÎ ¿å½É´ãÀº ºÎ´ëÂî°³(ÀÏ¹ÝÀ¯Å: 'euc_kr' codec can't decode byte 0xc5 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:31,712 - ERROR - Failed to decode value ³îºÎ ¿å½É´ãÀº ÁÖ²Ù¹ÌººÀ½(¸Å¿î¸: 'euc_kr' codec can't decode byte 0xb8 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:31,713 - ERROR - Failed to decode value ³îºÎ ¿å½É´ãÀº ÁÖ²Ù¹ÌººÀ½(¾à°£¸: 'euc_kr' codec can't decode byte 0xb8 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:31,723 - ERROR - Failed to decode value À¯¾î½ºÀ§´ëÇÑÄ¡Áî¼Ò½ÃÁö(GSÆíÀÇÁ: 'euc_kr' codec can't decode byte 0xc1 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:31,725 - ERROR - Failed to decode value ³îºÎ±èÄ¡ºÎ´ëÂî°³(³ªµé°¡°Ô)(¿Â¶: 'euc_kr' codec can't decode byte 0xb6 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:31,729 - ERROR - Failed to decode value ÈÆÁ¦±¸ÀÌÈÄ¶ûÅ©²¿Ä¡(À¯)(ÀÏ¹ÝÀ¯Å: 'euc_kr' codec can't decode byte 0xc5 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:31,754 - ERROR - Failed to decode value Á ¿ë±â(7oz)°ËÁ¤: 'euc_kr' codec can't decode byte 0x9a in position 0: illegal multibyte sequence
+2024-10-23 09:08:31,754 - ERROR - Failed to decode value Á ¿ë±â ¸®µå: 'euc_kr' codec can't decode byte 0x9a in position 0: illegal multibyte sequence
+2024-10-23 09:08:31,900 - ERROR - Failed to decode value À¯Åë»ç¾÷ÆÀ :  ¿ùÇâ ¶±ººÀÌ¼Ò½º(°¡Äª) »ý»ê¿ë - ÀÎÅÍ³: 'euc_kr' codec can't decode byte 0xb3 in position 49: incomplete multibyte sequence
+2024-10-23 09:08:32,119 - ERROR - Failed to decode value À¯Åë)ÅÁ¼öÀ°º»´É5ÙíÅÁ¼öÀ°(±¹³»»: 'euc_kr' codec can't decode byte 0xbb in position 29: incomplete multibyte sequence
+2024-10-23 09:08:32,144 - ERROR - Failed to decode value À¯Åë)ÄîÞÂüÄ¡: 'euc_kr' codec can't decode byte 0x98 in position 7: illegal multibyte sequence
+2024-10-23 09:08:32,144 - ERROR - Failed to decode value À¯Åë)ÄîÞÂüÄ¡       : 'euc_kr' codec can't decode byte 0x98 in position 7: illegal multibyte sequence
+2024-10-23 09:08:32,144 - ERROR - Failed to decode value À¯Åë)ÄîÞÂüÄ¡                 : 'euc_kr' codec can't decode byte 0x98 in position 7: illegal multibyte sequence
+2024-10-23 09:08:32,223 - ERROR - Failed to decode value F1-3010, ÄîÞ: 'euc_kr' codec can't decode byte 0x98 in position 11: illegal multibyte sequence
+2024-10-23 09:08:32,225 - ERROR - Failed to decode value ÀÓÁ÷¿ø)½½¶óÀÌ½º(µÎ¸ÞÄÚ¹«¿¬)»ï°: 'euc_kr' codec can't decode byte 0xb0 in position 29: incomplete multibyte sequence
+2024-10-23 09:08:32,283 - INFO - 8819 records were inserted successfully into MySQL.
+2024-10-23 09:08:32,284 - INFO - Closed MySQL connection.
+2024-10-23 09:08:32,286 - INFO - Closed Informix connection.
+2024-10-23 09:08:32,286 - INFO - ETL process for all records completed successfully.

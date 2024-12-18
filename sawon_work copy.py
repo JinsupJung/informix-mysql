@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Configure logging with dynamic log filename based on the current date
 today = datetime.now().strftime("%Y%m%d")
-log_filename = f'sawon_work_log_{today}.log'
+log_filename = f'/home/nolboo/etl-job/log/sawon_work_log_{today}.log'
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -76,24 +76,49 @@ try:
     # Fetch records from Informix
     query = """
     SELECT 
-        t.work_sawon, t.work_date, t.work_fwork, t.work_twork, t.work_content, 
-        t.work_magam, t.reg_id, t.reg_dt, t.hue_time_n, t.ext_time_n, t.nig_time_n, 
-        t.holi_gubun, t.total_time, t.part_time_n, t.conf_yn, t.conf_date, 
-        t.conf_sabun, t.holiday, c.ks_name, c.ks_busor, b.bu_name,
-        i.inout_pay -- Fetch inout_pay from tb_store_sawon_inout
-    FROM 
-        nolbooco:INFORMIX.tb_store_sawon_work_n t
-    LEFT JOIN 
-        C_KAN_SABUN c ON t.work_sawon = c.ks_sabun
-    LEFT JOIN 
-        c_busor b ON c.ks_busor = b.bu_code
-    LEFT JOIN 
-        tb_store_sawon_inout i ON c.ks_name = i.inout_sw_nm
+        w.work_sawon,  
+        w.work_date,
+        w.work_fwork,
+        w.work_twork,
+        w.hue_time_n,
+        w.total_time,
+        w.holiday,
+        k.ks_name,
+        k.ks_busor,
+        CASE 
+            WHEN io.inout_type = 1 THEN io.inout_pay / 209
+            ELSE io.inout_pay
+        END AS inout_pay_adjusted, 
+        io.inout_indate,
+        io.inout_chain_no,
+        io.inout_sw_jikchak,
+        io.inout_type,
+        CASE 
+            WHEN io.inout_type = 1 THEN io.inout_pay / 209 * w.total_time / 60
+            ELSE io.inout_pay * w.total_time / 60
+        END AS daily_pay     
+        FROM 
+        nolbooco:INFORMIX.tb_store_sawon_work_n w
+    JOIN 
+        (
+            SELECT 
+                ks_sabun, 
+                ks_name,
+                ks_busor
+            FROM 
+                c_kan_sabun
+            WHERE 
+                ks_edate = ''  
+                AND ks_gubun = '01'
+        ) AS k
+        ON w.work_sawon = k.ks_sabun  
+    JOIN 
+        tb_store_sawon_inout io 
+        ON (k.ks_name = io.inout_sw_nm OR k.ks_name = io.inout_sw_nm || '(A/R)')
     WHERE 
-        c.KS_GUBUN = '01' 
-        AND c.KS_SABUN LIKE '%A'
-        AND (c.ks_edate IS NULL OR c.ks_edate = '')
-        AND t.work_date > '20240801';
+        io.inout_gubun <> '2'
+        AND w.total_time <> ''
+        AND w.work_date > '20240801';
     """
     
     logging.info("Executing query on Informix.")
@@ -127,10 +152,22 @@ try:
     # Define the MySQL INSERT statement for tb_store_sawon_work with inout_pay added
     mysql_insert_query = """
     INSERT INTO tb_store_sawon_work (
-        work_sawon, work_date, work_fwork, work_twork, work_content, work_magam, 
-        reg_id, reg_dt, hue_time_n, ext_time_n, nig_time_n, holi_gubun, total_time, 
-        part_time_n, conf_yn, conf_date, conf_sabun, holiday, ks_name, ks_busor, bu_name, inout_pay
-    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        work_sawon,  
+        work_date,
+        work_fwork,
+        work_twork,
+        hue_time_n,
+        total_time,
+        holiday,
+        ks_name,
+        ks_busor,
+        inout_pay,
+        inout_indate,
+        inout_chain_no,
+        inout_sw_jikchak,
+        inout_type,
+        daily_pay
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
     # Insert records into MySQL after converting to UTF-8

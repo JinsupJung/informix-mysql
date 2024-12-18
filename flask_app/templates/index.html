@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가맹점 웹발주 엑셀 저장</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 100px;
+        }
+        .button {
+            padding: 20px 40px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>가맹점 웹발주 엑셀 저장</h1>
+        <form action="/save_excel" method="post">
+            <button type="submit" class="btn btn-success button">엑셀 저장</button>
+        </form>
+        {% if message %}
+        <div class="alert alert-info mt-4">{{ message }}</div>
+        {% endif %}
+        {% if download_link %}
+        <div class="alert alert-success mt-2">
+            엑셀 파일이 생성되었습니다. <a href="{{ download_link }}" class="alert-link">여기</a>를 클릭하여 다운로드하세요.
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
